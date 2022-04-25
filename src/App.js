@@ -5,10 +5,14 @@ import { FakeStoreClient } from './api/FakeStoreClient';
 
 function App() {
   const [users, setUsers] = useState([]);
+  const [carts, setCarts] = useState([]);
 
   useEffect(() => {
     FakeStoreClient.get('/users').then((response) => {
       setUsers(response.data);
+    });
+    FakeStoreClient.get('/carts').then((response) => {
+      setCarts(response.data);
     });
   }, []);
 
