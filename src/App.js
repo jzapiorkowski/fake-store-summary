@@ -1,6 +1,6 @@
-import './App.css';
 import { useEffect, useState } from 'react';
 import { FakeStoreClient } from './api/FakeStoreClient';
+import CategorySummary from './components/CategorySummary';
 
 function App() {
   const [users, setUsers] = useState([]);
@@ -19,7 +19,11 @@ function App() {
     });
   }, []);
 
-  return <div className='App'></div>;
+  return (
+    <div className='App'>
+      <CategorySummary products={products} />
+    </div>
+  );
 }
 
 export default App;
