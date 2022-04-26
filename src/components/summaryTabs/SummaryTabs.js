@@ -6,6 +6,7 @@ import Box from '@mui/material/Box';
 import CartsSummary from '../cartsSummary/CartsSummary';
 import CategorySummary from '../categorySummary/CategorySummary';
 import UsersSummary from '../usersSummary/UsersSummary';
+import './summaryTabs.scss';
 
 function SummaryTabs({ products, carts, users }) {
   const [tabNumber, setTabNumber] = useState(0);
