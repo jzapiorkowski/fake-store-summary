@@ -1,8 +1,7 @@
 import { useEffect, useState } from 'react';
 import { FakeStoreClient } from './api/FakeStoreClient';
-import CartsSummary from './components/CartsSummary';
-import CategorySummary from './components/CategorySummary';
-import UsersSummary from './components/UsersSummary';
+import './app.scss';
+import SummaryTabs from './components/SummaryTabs';
 
 function App() {
   const [users, setUsers] = useState([]);
@@ -32,9 +31,10 @@ function App() {
 
   return (
     <div className='App'>
-      <CategorySummary products={products} />
-      <CartsSummary carts={carts} products={products} users={users} />
-      <UsersSummary users={users} />
+      <div className='banner'>
+        <h1>SHOP SUMMARY</h1>
+      </div>
+      <SummaryTabs users={users} products={products} carts={carts} />
     </div>
   );
 }
