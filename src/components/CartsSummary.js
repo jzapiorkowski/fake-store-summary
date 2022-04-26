@@ -10,6 +10,12 @@ function CartsSummary(props) {
     }, 0);
   }
 
+  const cartsWithValues = props.carts
+    .map((cart) => {
+      return { ...cart, value: cartsValue(cart.products) };
+    })
+    .sort((a, b) => (a.value < b.value ? 1 : -1));
+
   return (
     <table>
       <thead>
@@ -21,13 +27,13 @@ function CartsSummary(props) {
         </tr>
       </thead>
       <tbody>
-        {props.carts?.map((cart, id) => {
+        {cartsWithValues.map((cart, id) => {
           return (
             <tr key={id}>
               <td>{cart.id}</td>
               <td>{cart.userId}</td>
               <td>{cart.date}</td>
-              <td>{cartsValue(cart.products)}</td>
+              <td>{cart.value}</td>
             </tr>
           );
         })}
