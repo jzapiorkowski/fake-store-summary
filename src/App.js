@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { FakeStoreClient } from './api/FakeStoreClient';
 import CartsSummary from './components/CartsSummary';
 import CategorySummary from './components/CategorySummary';
+import UsersSummary from './components/UsersSummary';
 
 function App() {
   const [users, setUsers] = useState([]);
@@ -33,6 +34,7 @@ function App() {
     <div className='App'>
       <CategorySummary products={products} />
       <CartsSummary carts={carts} products={products} users={users} />
+      <UsersSummary users={users} />
     </div>
   );
 }
