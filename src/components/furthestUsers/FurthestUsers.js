@@ -26,7 +26,7 @@ function FurthestUsers({ firstUser, secondUser, distance }) {
         </tbody>
       </table>
       <div className='distance'>
-        {distance.toFixed(2)}
+        {distance.toFixed(2)} km
         <SocialDistanceIcon />
       </div>
       <table className='user'>
