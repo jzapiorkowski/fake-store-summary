@@ -13,9 +13,9 @@ function UsersSummary({ users }) {
         </tr>
       </thead>
       <tbody>
-        {users.map((user) => {
+        {users.map((user, id) => {
           return (
-            <tr>
+            <tr key={id}>
               <td>{user.id}</td>
               <td>{user.username}</td>
               <td>{user.name.firstname}</td>
