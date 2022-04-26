@@ -19,7 +19,9 @@ function CartsSummary(props) {
 
   return (
     <>
+      <h3>Most expensive cart</h3>
       <MostExpensiveCart cart={cartsWithValues[0]} users={props.users} />
+      <h3>All carts</h3>
       <table>
         <thead>
           <tr>
