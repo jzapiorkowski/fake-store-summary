@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { FakeStoreClient } from './api/FakeStoreClient';
+import CartsSummary from './components/CartsSummary';
 import CategorySummary from './components/CategorySummary';
 
 function App() {
@@ -31,6 +32,7 @@ function App() {
   return (
     <div className='App'>
       <CategorySummary products={products} />
+      <CartsSummary carts={carts} products={products} users={users} />
     </div>
   );
 }
