@@ -1,6 +1,7 @@
 import React from 'react';
 import findTwoFurthestUsers from '../../utils/FindFurthestUsers';
 import FurthestUsers from '../furthestUsers/FurthestUsers';
+import './usersSummary.scss';
 
 function UsersSummary({ users }) {
   const [firstUser, secondUser, maxDistance] = findTwoFurthestUsers(users);
