@@ -37,7 +37,7 @@ function CartsSummary(props) {
               <tr key={id}>
                 <td>{cart.id}</td>
                 <td>{cart.userId}</td>
-                <td>{cart.date}</td>
+                <td>{cart.date.substring(0, 10)}</td>
                 <td>{cart.value}</td>
               </tr>
             );

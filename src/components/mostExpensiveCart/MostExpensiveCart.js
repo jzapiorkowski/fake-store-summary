@@ -23,7 +23,7 @@ function MostExpensiveCart({ cart, users }) {
           <td>
             {userInfo.name.firstname} {userInfo.name.lastname}
           </td>
-          <td>{cart.date}</td>
+          <td>{cart.date.substring(0, 10)}</td>
           <td>{cart.value}</td>
         </tr>
       </tbody>
