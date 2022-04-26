@@ -8,11 +8,13 @@ function UsersSummary({ users }) {
 
   return (
     <>
+      <h3>Two users living furthest away from each other</h3>
       <FurthestUsers
         firstUser={firstUser}
         secondUser={secondUser}
         distance={maxDistance}
       />
+      <h3>All users</h3>
       <table>
         <thead>
           <tr>
