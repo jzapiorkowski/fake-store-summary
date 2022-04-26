@@ -26,7 +26,7 @@ function CartsSummary(props) {
             <th>ID</th>
             <th>UserID</th>
             <th>Date</th>
-            <td>Value</td>
+            <th>Value</th>
           </tr>
         </thead>
         <tbody>
