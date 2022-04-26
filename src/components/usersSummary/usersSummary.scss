@@ -1,5 +1,12 @@
 table {
   margin: auto;
+  th,
+  td {
+    border: 1px solid white;
+    text-align: center;
+    padding: 5px;
+  }
+  border-collapse: collapse;
 }
 h3 {
   text-align: center;
