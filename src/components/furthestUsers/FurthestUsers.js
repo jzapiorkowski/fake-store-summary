@@ -1,9 +1,10 @@
 import React from 'react';
 import SocialDistanceIcon from '@mui/icons-material/SocialDistance';
+import './furthestUsers.scss';
 
 function FurthestUsers({ firstUser, secondUser, distance }) {
   return (
-    <div>
+    <div className='furthest'>
       <table className='user'>
         <thead>
           <tr>
