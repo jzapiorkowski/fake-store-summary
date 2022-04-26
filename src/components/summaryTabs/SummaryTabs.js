@@ -24,18 +24,18 @@ function SummaryTabs({ products, carts, users }) {
           textColor='white'
           centered
         >
-          <Tab label='Categories Summary' />
           <Tab label='Carts Summary' />
+          <Tab label='Categories Summary' />
           <Tab label='Users Summary' />
         </Tabs>
       </Box>
-      <TabPanel value={tabNumber} index={0}>
-        <CategorySummary products={products} />
-      </TabPanel>
-      <TabPanel value={tabNumber} index={1}>
+      <TabPanel value={tabNumber} index={0} className='content'>
         <CartsSummary carts={carts} products={products} users={users} />
       </TabPanel>
-      <TabPanel value={tabNumber} index={2}>
+      <TabPanel value={tabNumber} index={1} className='content'>
+        <CategorySummary products={products} />
+      </TabPanel>
+      <TabPanel value={tabNumber} index={2} className='content'>
         <UsersSummary users={users} />
       </TabPanel>
     </Box>
