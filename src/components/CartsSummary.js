@@ -4,7 +4,7 @@ import MostExpensiveCart from './MostExpensiveCart';
 function CartsSummary(props) {
   function cartsValue(productsInCart) {
     return productsInCart.reduce((previousValue, currentValue) => {
-      const product = props.products?.find((element) => {
+      const product = props.products.find((element) => {
         return element.id === currentValue.productId;
       });
       return previousValue + currentValue.quantity * product.price;
