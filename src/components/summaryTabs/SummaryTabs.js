@@ -6,10 +6,13 @@ import Box from '@mui/material/Box';
 import CartsSummary from '../cartsSummary/CartsSummary';
 import CategorySummary from '../categorySummary/CategorySummary';
 import UsersSummary from '../usersSummary/UsersSummary';
+import useMediaQuery from '@mui/material/useMediaQuery';
 import './summaryTabs.scss';
 
 function SummaryTabs({ products, carts, users }) {
   const [tabNumber, setTabNumber] = useState(0);
+
+  const smallScreen = useMediaQuery('(max-width:600px)');
 
   const handleTabChange = (event, newValue) => {
     setTabNumber(newValue);
@@ -24,6 +27,7 @@ function SummaryTabs({ products, carts, users }) {
           aria-label='basic tabs example'
           textColor='white'
           centered
+          variant={smallScreen && 'fullWidth'}
         >
           <Tab label='Carts Summary' />
           <Tab label='Categories Summary' />
