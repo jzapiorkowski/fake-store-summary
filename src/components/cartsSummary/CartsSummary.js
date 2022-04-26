@@ -1,5 +1,5 @@
 import React from 'react';
-import MostExpensiveCart from './MostExpensiveCart';
+import MostExpensiveCart from '../mostExpensiveCart/MostExpensiveCart';
 
 function CartsSummary(props) {
   function cartsValue(productsInCart) {

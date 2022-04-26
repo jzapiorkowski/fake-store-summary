@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { FakeStoreClient } from './api/FakeStoreClient';
 import './app.scss';
-import SummaryTabs from './components/SummaryTabs';
+import SummaryTabs from './components/summaryTabs/SummaryTabs';
 
 function App() {
   const [users, setUsers] = useState([]);

@@ -3,9 +3,9 @@ import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
-import CartsSummary from './CartsSummary';
-import CategorySummary from './CategorySummary';
-import UsersSummary from './UsersSummary';
+import CartsSummary from '../cartsSummary/CartsSummary';
+import CategorySummary from '../categorySummary/CategorySummary';
+import UsersSummary from '../usersSummary/UsersSummary';
 
 function SummaryTabs({ products, carts, users }) {
   const [tabNumber, setTabNumber] = useState(0);
