@@ -27,7 +27,7 @@ function CategorySummary(props) {
           return (
             <tr key={id}>
               <td>{category}</td>
-              <td>{getTotalValue(category)}</td>
+              <td>{Math.round(getTotalValue(category) * 100) / 100}</td>
             </tr>
           );
         })}
