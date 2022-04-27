@@ -1,5 +1,11 @@
 table {
   margin: auto;
+  @media (max-width: 600px) {
+    th,
+    td {
+      padding: 2px !important;
+    }
+  }
   th,
   td {
     border: 1px solid white;
