@@ -1,5 +1,7 @@
 # Getting Started with Create React App
 
+You can check the demo [here](https://jzapiorkowski.github.io/fake-store-summary/)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
