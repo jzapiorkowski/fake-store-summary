@@ -25,16 +25,17 @@ function App() {
     });
   }, []);
 
-  if (isLoading) {
-    return <h1>Loading...</h1>;
-  }
-
   return (
     <div className='App'>
       <div className='banner'>
         <h1>SHOP SUMMARY</h1>
       </div>
-      <SummaryTabs users={users} products={products} carts={carts} />
+      <SummaryTabs
+        users={users}
+        products={products}
+        carts={carts}
+        isLoading={isLoading}
+      />
     </div>
   );
 }
