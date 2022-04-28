@@ -7,8 +7,9 @@ import CategorySummary from '../categorySummary/CategorySummary';
 import UsersSummary from '../usersSummary/UsersSummary';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import './summaryTabs.scss';
+import LoadingDisplay from '../loadingDisplay/LoadingDisplay';
 
-function SummaryTabs({ products, carts, users }) {
+function SummaryTabs({ products, carts, users, isLoading }) {
   const [tabNumber, setTabNumber] = useState(0);
 
   const smallScreen = useMediaQuery('(max-width:600px)');
@@ -34,13 +35,21 @@ function SummaryTabs({ products, carts, users }) {
         </Tabs>
       </Box>
       <TabPanel value={tabNumber} index={0} className='content'>
-        <CartsSummary carts={carts} products={products} users={users} />
+        {isLoading ? (
+          <LoadingDisplay />
+        ) : (
+          <CartsSummary carts={carts} products={products} users={users} />
+        )}
       </TabPanel>
       <TabPanel value={tabNumber} index={1} className='content'>
-        <CategorySummary products={products} />
+        {isLoading ? (
+          <LoadingDisplay />
+        ) : (
+          <CategorySummary products={products} />
+        )}
       </TabPanel>
       <TabPanel value={tabNumber} index={2} className='content'>
-        <UsersSummary users={users} />
+        {isLoading ? <LoadingDisplay /> : <UsersSummary users={users} />}
       </TabPanel>
     </Box>
   );
