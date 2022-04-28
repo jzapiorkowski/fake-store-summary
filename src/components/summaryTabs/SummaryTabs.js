@@ -26,7 +26,7 @@ function SummaryTabs({ products, carts, users }) {
           aria-label='basic tabs example'
           textColor='white'
           centered
-          variant={smallScreen && 'fullWidth'}
+          variant={smallScreen ? 'fullWidth' : 'standard'}
         >
           <Tab label='Carts Summary' />
           <Tab label='Categories Summary' />
