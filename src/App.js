@@ -10,17 +10,19 @@ function App() {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    const p1 = FakeStoreClient.get('/users').then((response) => {
+    const usersPromise = FakeStoreClient.get('/users').then((response) => {
       setUsers(response.data);
     });
-    const p2 = FakeStoreClient.get('/carts').then((response) => {
+    const cartsPromise = FakeStoreClient.get('/carts').then((response) => {
       setCarts(response.data);
     });
-    const p3 = FakeStoreClient.get('/products').then((response) => {
-      setProducts(response.data);
-    });
+    const productsPromise = FakeStoreClient.get('/products').then(
+      (response) => {
+        setProducts(response.data);
+      }
+    );
 
-    Promise.all([p1, p2, p3]).then(() => {
+    Promise.all([usersPromise, cartsPromise, productsPromise]).then(() => {
       setIsLoading(false);
     });
   }, []);
